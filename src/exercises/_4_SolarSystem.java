@@ -1,9 +1,10 @@
 package exercises;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
-public class _3_SolarSystem {
+public class _4_SolarSystem {
 
 	public static void main(String[] args) {
 		List<Planet> planets = Arrays.asList(
@@ -17,7 +18,7 @@ public class _3_SolarSystem {
 		
 
 		// 1: Sort the planets by distance from the sun
-		
+	
 		// 2. Sort the planets in alphabetical order
 		
 		// 3. Sort planets from largest to smallest
