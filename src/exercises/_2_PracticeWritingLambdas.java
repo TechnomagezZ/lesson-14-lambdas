@@ -7,22 +7,24 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.function.BiFunction;
 import java.util.function.Function;
+import java.util.regex.Matcher;
 
 import org.junit.jupiter.api.Test;
 
 class _2_PracticeWritingLambdas {
+	String result = "";
 	
 	/* Assign lambda expressions to each of the functions below, so that the tests pass. */
 
 	Function<Integer, Integer> squareLambda = x -> x * x;
-	Function<Integer, Integer> INCREMENT_LAMBDA ;
-	Function<String, String> REMOVE_VOWELS_LAMBDA;
-	Function<Integer, Integer> DOUBLE_LAMBDA;
-	BiFunction<Integer, Integer, Integer> PYTHAGOREAN_LAMBDA;
-	Function<Integer, String> EVEN_ODD_LAMBDA;
-	Function<Character, Integer> ASCII_LAMBDA;
-	Function<String, String> CAPITALIZE_LAMBDA;
-	Function<String, String> BLACKOUT_LAMBDA;
+	Function<Integer, Integer> INCREMENT_LAMBDA = x -> x + 1;
+	Function<String, String> REMOVE_VOWELS_LAMBDA = withVowels -> withVowels.replaceAll("[aeiouAEIOU]", "");;
+	Function<Integer, Integer> DOUBLE_LAMBDA = x -> x * 2;
+	BiFunction<Integer, Integer, Integer> PYTHAGOREAN_LAMBDA; //i have no idea;
+	Function<Integer, String> EVEN_ODD_LAMBDA = integer -> { if(integer % 2 == 0) result = "even"; if(integer % 2 != 0) result = "odd"; return result;};								
+	Function<Character, Integer> ASCII_LAMBDA = Character -> {int ascii = (int)Character; return ascii;};
+	Function<String, String> CAPITALIZE_LAMBDA = String -> {String word = Character.toUpperCase(String.charAt(0)) + String.substring(1); return word;};
+	Function<String, String> BLACKOUT_LAMBDA = String -> { String.replaceAll("shit", "####"); String.replaceAll("motherfucker", "############"); return String;};
 	
 	@Test
 	void testIncrement() {
