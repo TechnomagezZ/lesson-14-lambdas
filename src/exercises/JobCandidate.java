@@ -44,6 +44,10 @@ public class JobCandidate {
 		this.salaryRequired = salaryRequired;
 	}
 
+	public JobCandidate() {
+		super();
+	}
+
 	public String toString() {
 		return "\n" + this.name + " " + NumberFormat.getCurrencyInstance().format(this.salaryRequired)
 				+ (this.teacherName.contains("June") ? " learned from the best👌" : " learned somehow🤷");
